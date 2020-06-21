@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, url_for
 
 app = Flask(__name__)
 
@@ -11,7 +11,7 @@ def index():
 
 @app.route('/about')
 def about():
-    return "Hello from about"
+    return render_template("about.html")
 
 
 @app.route('/user/<string:name>/<int:id>')
