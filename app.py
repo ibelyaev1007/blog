@@ -41,7 +41,7 @@ def create_article():
 
         try:
             db.session.add(article)
-            db.session.commnit()
+            db.session.commit()
             return redirect('/')
         except:
             return "При добавлении статьи произошла ошибка"
